@@ -1,0 +1,97 @@
+﻿@model AnotherReviewSite.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2>Full Review</h2>
+<!--Creates the row-->
+<div class="row">
+    <!--creates the column for the individual entry-->
+    <div class="col-md-12 techbg">
+        <div class="thumbnail techbg">
+            <div class="caption whitetxt2">
+
+               <!--Details of the individual entries-->
+
+                <p><h3> @Html.DisplayNameFor(model => model.Category.Name)</h3> @Html.DisplayFor(model => model.Category.Name)</p>
+
+                <p><h3>@Html.DisplayNameFor(model => model.Title)</h3>@Html.DisplayFor(model => model.Title)</p>
+
+                <p><h3>@Html.DisplayNameFor(model => model.Content)</h3> @Html.DisplayFor(model => model.Content)</p>
+
+                <p><h3>@Html.DisplayNameFor(model => model.ReviewerName):</h3> @Html.DisplayFor(model => model.ReviewerName)</p>
+
+                <p><h3>@Html.DisplayNameFor(model => model.PublishDate):</h3> @Html.DisplayFor(model => model.PublishDate)</p>
+
+                <p>
+                    <!--buttons to edit or returen to the review index-->
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Back to List", "Index", new { id = Model.ID }, new { @class = "btn btn-info" })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*@Html.DisplayNameFor(model => model.Category.Name)*@
+@*@Html.DisplayNameFor(model => model.Title)*@
+@*@Html.DisplayNameFor(model => model.Content)*@
+@*@Html.DisplayNameFor(model => model.PublishDate)*@
+
+
+
+
+
+
+@*<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReviewerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@

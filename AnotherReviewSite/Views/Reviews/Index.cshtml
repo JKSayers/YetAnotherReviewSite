@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AnotherReviewSite.Models.Review>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reviews</h2>
+
+
+
+<div class="row techbg">
+    <!-- foreach loop to display each item in a posting-->
+    @foreach (var item in Model)
+    {
+
+        <!-- Column for review items-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="thumbnail bgthumb">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+                    <p><span class="label label-default">@Html.DisplayNameFor(model => model.Category.Name) </span> &nbsp @Html.DisplayFor(modelItem => item.Category.Name)</p>
+                    <p><span class="label label-default">@Html.DisplayNameFor(model => model.PublishDate): </span> &nbsp @Html.DisplayFor(modelItem => item.PublishDate)</p>
+                    <p><span class="label label-default">@Html.DisplayNameFor(model => model.ReviewerName): </span> &nbsp @Html.DisplayFor(modelItem => item.ReviewerName)</p>
+                    @Html.ActionLink("Read Review", "Details", new { id = item.ID }, new { @class = "btn btn-info", role = "button" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+

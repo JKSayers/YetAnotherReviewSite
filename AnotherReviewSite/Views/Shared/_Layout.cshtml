@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Terrible Reviews</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- Fonts from Font.Google-->
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <!--Navbar. Customized with links to review index, home landing page as "TR", About, and Contact pages-->
+    <div class="navbar navbar-inverse navshadow navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/Home"><span class="glyphicon glyphicon-thumbs-down"></span>TR</a></li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <h1>Your source for everything TERRIBLE.....</h1><hr />
+        </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!--Customized footer-->
+        <footer>
+            <span class="text-right"> <p>&copy; @DateTime.Now.Year - Terrible Reviews</p></span>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

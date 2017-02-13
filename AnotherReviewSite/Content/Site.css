@@ -1,0 +1,77 @@
+﻿/* Adds custom font and otherwise customizes the body*/
+body {
+    font-family: Exo;
+    font-size: 16px;
+    padding-top: 31px;
+    padding-bottom: 20px;
+    background-color: ghostwhite;
+
+}
+
+header {
+    color: grey;
+    background-color: rgba(247, 238, 238, 0.10);
+    padding-top: 10px;
+    margin-top: 10px;
+    background-image: url('Images/banner-943866_960_720.jpg');
+}
+/* custominzing footer text*/
+footer {
+    text-shadow: initial;
+    font-size: larger;
+    letter-spacing: 4px;
+}
+/* sets bg color to dark blue*/
+.darkblue {
+    background-color: darkslateblue;
+}
+/* Makes white text with transpartent white as a background color*/
+.whitetxt {
+    color: white;
+    background-color: rgba(180, 150, 150, 0.41);
+}
+.whitetxt2 {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+/*Provides a background image, this one being the fancy geometric design*/
+.techbg {
+    background-image: url('Images/techpic2.jpg');
+}
+/*centering text*/
+.center {
+    text-align: center;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*Adding a shadow to the navbar*/
+.navshadow {
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+/*Spacing out the text in the label class*/
+.label {
+    letter-spacing: 4px;
+}
+
+.bgthumb {
+    background-color: rgba(255, 255, 255, 0.68)
+
+}
